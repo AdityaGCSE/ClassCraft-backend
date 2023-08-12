@@ -6,7 +6,7 @@ passport.use(
 		{
 			clientID: process.env.CLIENT_ID,
 			clientSecret: process.env.CLIENT_SECRET,
-			callbackURL: `${SERVER_URL}/auth/google/callback`,
+			callbackURL: `${process.env.SERVER_URL}/auth/google/callback`,
 			scope: ["profile", "email"],
 		},
 		function (accessToken, refreshToken, profile, callback) {
@@ -20,7 +20,7 @@ passport.use(
 		{
 			clientID: process.env.CLIENT_ID,
 			clientSecret: process.env.CLIENT_SECRET,
-			callbackURL: `${SERVER_URL}/register/google/callback`,
+			callbackURL: `${process.env.SERVER_URL}/register/google/callback`,
 			scope: ["profile", "email"],
 		},
 		function (accessToken, refreshToken, profile, callback) {
