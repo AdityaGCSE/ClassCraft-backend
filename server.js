@@ -13,7 +13,7 @@ require("./passport");
 
 mongoose.connect(process.env.MONGO_URL)
 .then(_=> console.log("connection successful"))
-.catch(err=> console.log("database connection fail"))
+.catch(err=> console.log("database connection fail",err));
 
 app.use(express.json());
 
