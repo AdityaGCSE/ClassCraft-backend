@@ -18,12 +18,13 @@ mongoose.connect(process.env.MONGO_URL)
 app.use(express.json());
 
 app.use(
-	cookieSession({
-		name: "session",
-		sameSite: "none",
-		keys: ["classcraft"],
-		maxAge: 24 * 60 * 60 * 100,
-	})
+  cookieSession({
+    name: "session",
+    keys: ["cyberwolve"],
+    maxAge: 24 * 60 * 60 * 1000, // Fix: Changed the maxAge value to milliseconds
+    sameSite: 'none', // Set SameSite attribute to 'None'
+    secure: true, // Set Secure attribute to true for HTTPS-only
+  })
 );
 
 app.use(passport.initialize());
