@@ -21,8 +21,6 @@ app.use(
 	cookieSession({
 		name: "session",
 		keys: ["cyberwolve"],
-		sameSite: "none",
-		keys: ["classcraft"],
 		maxAge: 24 * 60 * 60 * 100,
 	})
 );
