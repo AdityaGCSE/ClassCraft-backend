@@ -4,6 +4,7 @@ const User = require('../models/User');
 
 
 router.get("/login/success", async (req, res) => {
+	res.cookie('session', { sameSite: 'none', secure: true });
 	if(req.user)
 	{
 		const existingUser = await User.findOne({ email: req.user._json.email });
