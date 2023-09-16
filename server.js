@@ -21,6 +21,9 @@ app.use(
 	cookieSession({
 		name: "session",
 		keys: ["cyberwolve"],
+		sameSite: "none",
+		domain: ".onrender.com",
+		path: "/",
 		secure: true,
 		maxAge: 24 * 60 * 60 * 100,
 	})
