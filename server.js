@@ -19,8 +19,8 @@ app.use(express.json());
 
 app.use(
 	cookieSession({
-		name: "sessio",
-		sameSite: false,
+		name: "session",
+		sameSite: none,
 		keys: ["cyberwolve"],
 		maxAge: 24 * 60 * 60 * 100,
 	})
