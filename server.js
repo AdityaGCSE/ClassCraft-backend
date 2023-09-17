@@ -19,7 +19,7 @@ app.use(express.json());
 
 app.use(
 	cookieSession({
-		name: "session",
+		name: "sessio",
 		sameSite: false,
 		keys: ["cyberwolve"],
 		maxAge: 24 * 60 * 60 * 100,
