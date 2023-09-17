@@ -17,9 +17,13 @@ mongoose.connect(process.env.MONGO_URL)
 
 app.use(express.json());
 
+app.set("trust proxy", true);
+
 app.use(
 	cookieSession({
 		name: "session",
+		sameSite: "none",
+		secure: true ,
 		keys: ["cyberwolve"],
 		maxAge: 24 * 60 * 60 * 100,
 	})
